@@ -1,0 +1,157 @@
+Cmp-Mod V01 Created by PcbNew date = Monday, 2013 February 11 14:33:10
+
+BeginCmp
+TimeStamp = /5117EDF1;
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = rcl-C0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117EDD6;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = rcl-C0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117EDE3;
+Reference = C3;
+ValeurCmp = 10nF;
+IdModule  = rcl-C0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117EFDF;
+Reference = C4;
+ValeurCmp = 10uF;
+IdModule  = rcl-C0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117F414;
+Reference = C5;
+ValeurCmp = 100nF;
+IdModule  = rcl-C0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /511808BC;
+Reference = C6;
+ValeurCmp = CPOL-EUD/7343-31R;
+IdModule  = rcl-D/7343-31R;
+EndCmp
+
+BeginCmp
+TimeStamp = /511812C3;
+Reference = C7;
+ValeurCmp = 100nF;
+IdModule  = rcl-C0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5118E91D;
+Reference = C8;
+ValeurCmp = 100nF;
+IdModule  = rcl-C0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117E9D5;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117E9E2;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117CA6F;
+Reference = J1;
+ValeurCmp = CON-SD-MMC-1;
+IdModule  = m-pad-2.1-14-5638-009-511-862;
+EndCmp
+
+BeginCmp
+TimeStamp = /5118EA0E;
+Reference = JP1;
+ValeurCmp = JUMPER3;
+IdModule  = jumper-SJ_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5118F466;
+Reference = JP2;
+ValeurCmp = PINHD-1X3;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5118F473;
+Reference = JP3;
+ValeurCmp = PINHD-1X3;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5118F479;
+Reference = JP4;
+ValeurCmp = PINHD-1X3;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117EA4F;
+Reference = R1;
+ValeurCmp = 1K;
+IdModule  = rcl-R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117EA66;
+Reference = R2;
+ValeurCmp = 1K;
+IdModule  = rcl-R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117EFEC;
+Reference = R3;
+ValeurCmp = 2K;
+IdModule  = rcl-R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117D40F;
+Reference = SHIELD1;
+ValeurCmp = ARDUINO_SHIELD;
+IdModule  = ARDUINO_SHIELD_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117ECDE;
+Reference = U1;
+ValeurCmp = ISL60002BIH311Z;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5117D717;
+Reference = U2;
+ValeurCmp = 74LS125;
+IdModule  = m-pad-2.1-SO14;
+EndCmp
+
+BeginCmp
+TimeStamp = /5118E6B4;
+Reference = U3;
+ValeurCmp = REF3125;
+IdModule  = SOT23;
+EndCmp
+
+EndListe
