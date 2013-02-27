@@ -1,3 +1,9 @@
+/**
+ *
+ * 
+ *
+**/
+
 #include <SD.h>
 
 #define ERROR_LED 2
@@ -8,6 +14,7 @@
 
 char outputFileName[10];
 boolean wasError = false;
+String content;
 
 void blinkSDCardGood();
 
@@ -16,10 +23,25 @@ void setup() {
  Serial.begin(9600);
  setupIO();
  setupSDCard(); 
+ content = String("");
+ content.reserve(16);
+}
+
+boolean cardPresentWriteable() {
+  pinMode(CARD_DETECT, INPUT);
+  digitalWrite(CARD_DETECT, HIGH);
+  pinMode(WRITE_PROTECTION, INPUT);
+  digitalWrite(WRITE_PROTECTION, HIGH);
+  boolean ret = digitalRead(CARD_DETECT) || digitalRead(WRITE_PROTECTION);
+  digitalWrite(CARD_DETECT, LOW);
+  digitalWrite(WRITE_PROTECTION, LOW);
+  pinMode(CARD_DETECT, OUTPUT);
+  pinMode(WRITE_PROTECTION, OUTPUT);
+  return ret;
 }
 
 void loop() {
-  if(digitalRead(CARD_DETECT) || digitalRead(WRITE_PROTECTION)) {
+  if(cardPresentWriteable()) {
     setError();
     delay(500);
   } else {
@@ -35,7 +57,7 @@ void loop() {
       File outputFile = SD.open(outputFileName, FILE_WRITE);
       if(outputFile) {
         digitalWrite(STATUS_LED, HIGH);
-        outputFile.println(String(analogRead(A0)));
+        outputFile.println(getContent());
         outputFile.close();
         digitalWrite(STATUS_LED, LOW);
         delay(1000);
@@ -45,16 +67,23 @@ void loop() {
     }
   }
 }
+  
+
+String getContent() {
+  content = "";
+  content.concat(map(analogRead(A0), 0, 1023, 0, 2500));
+  content.concat(", ");
+  content.concat(map(analogRead(A1), 0, 1023, 0, 2500));
+  content.concat(", ");
+  content.concat(map(analogRead(A2), 0, 1023, 0, 2500));
+  Serial.println(content);
+  return content;
+}
 
 void setupIO() {
  pinMode(CS, OUTPUT);
  pinMode(ERROR_LED, OUTPUT);
  pinMode(STATUS_LED, OUTPUT);
-
- pinMode(CARD_DETECT, INPUT);
- digitalWrite(CARD_DETECT, HIGH);
- pinMode(WRITE_PROTECTION, INPUT);
- digitalWrite(WRITE_PROTECTION, HIGH);
 }
 
 boolean setupSDCard() {
