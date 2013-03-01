@@ -3,6 +3,8 @@ ArduinoDataloggerShield
 
 SD card datalogger shield for Arduino with two external voltage references. 
 
+![](img/datalogger-shield.jpg)
+
 I've made this shield because there were no designs in the wild employing external references - this is usefull feature to have when logging analog voltages.
 
 Features: 
